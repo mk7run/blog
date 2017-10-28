@@ -4,12 +4,17 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post = Post.new
   end
 
   def create
     @post = Post.new(post_params)
-    @post.save
-    redirect_to @post
+    if @post.save
+      redirect_to @post
+    else
+      # you want to render so you don't lose your content if the user doesn't submit something correctly
+      render 'new'
+    end
   end
 
   def show
