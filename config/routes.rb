@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   root "posts#index"
 
   get '/about', to: 'pages#about'
+
+  resources :users, only: [:create, :new, :show ]
+  resources :sessions, only: [:new, :create, :destroy]
 end

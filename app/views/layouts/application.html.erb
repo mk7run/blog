@@ -10,17 +10,20 @@
 
   <body>
     <div id="sidebar">
-        <ul>
-          <li class="category">Website</li>
-          <li><%= link_to "Blog", root_path %></li>
-          <li><%= link_to "About", about_path %></li>
-        </ul>
-        <ul>
-          <li class="category">Social</li>
-          <li><a href="https://linkedin.com/in/mkanhirun">LinkedIn</a></li>
-          <li><a href="https://github.com/mk7run">Github</a></li>
-        </ul>
-        <p class="sign_in">Admin Login</p>
+      <div id="buttons">
+        <button class="button"><%= link_to 'Log in', '/sessions/new' %></button>
+        <button class="button"><%= link_to 'Sign up', '/users/new' %></button>
+      </div>
+      <ul>
+        <li class="category">Website</li>
+        <li><%= link_to "Blog", root_path %></li>
+        <li><%= link_to "About", about_path %></li>
+      </ul>
+      <ul>
+        <li class="category">Social</li>
+        <li><a href="https://linkedin.com/in/mkanhirun">LinkedIn</a></li>
+        <li><a href="https://github.com/mk7run">Github</a></li>
+      </ul>
     </div>
 
     <div id="main_content">

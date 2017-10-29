@@ -1,0 +1,23 @@
+<div id="page_wrapper">
+  <h1>Sign Up</h1>
+
+  <div class="forms">
+    <%= form_for :user, url: '/users' do |f| %>
+      <p>
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+      </p>
+      <p>
+        <%= f.label :email %><br>
+        <%= f.text_field :email %>
+      </p>
+      <p>
+        <%= f.label :password %><br>
+        <%= f.password_field :password %>
+      </p>
+      <p>
+        <%= f.submit "Sign up" %>
+      </p>
+    <% end %>
+  </div>
+</div>
