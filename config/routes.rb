@@ -9,5 +9,8 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#about'
 
   resources :users, only: [:create, :new, :show ]
-  resources :sessions, only: [:new, :create, :destroy]
+
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
 end
